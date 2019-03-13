@@ -1,6 +1,6 @@
-CREATE TABLE menard_silo_count_min_max_med
+CREATE TABLE menard_farm_capacity_estimates
 AS
-SELECT f.owner, f.taxbill_ad, f.taxbill_cs, f.geom, 
+SELECT f.owner, f.taxbill_ad ||' '|| f.taxbill_cs AS address, f.geom, 
 COUNT(s.geom) AS silo_count,
 SUM(s.low_bushel) AS low_bushel_sum,
 SUM(s.high_bushe) AS high_bushel_sum,
